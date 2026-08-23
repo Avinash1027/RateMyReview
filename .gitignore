@@ -15,10 +15,13 @@ data/processed/*
 data/raw/*
 !data/raw/sample_reviews.csv
 
-# Training run checkpoints and binary weights are too large for git
-# (retrain locally: see README "Train the models")
+# Training checkpoints are disposable; binary weights are stored via Git LFS
+# (see .gitattributes). JSON/tokenizer files live in regular git.
 models/distilbert_weights/*
 !models/distilbert_weights/.gitkeep
+!models/distilbert_weights/*.json
+!models/distilbert_weights/*.safetensors
+!models/distilbert_weights/*.bin
 
 # OS
 .DS_Store
