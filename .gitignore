@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Environments
+.env
+
+# Data artifacts
+data/processed/*
+!data/processed/.gitkeep
+# Large raw datasets are kept out of git (train from the local copy)
+data/raw/*
+!data/raw/sample_reviews.csv
+
+# Training run checkpoints and binary weights are too large for git
+# (retrain locally: see README "Train the models")
+models/distilbert_weights/*
+!models/distilbert_weights/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db

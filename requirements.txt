@@ -1,0 +1,24 @@
+# RateMyReview - Python dependencies
+# Install everything:        pip install -r requirements.txt
+# Lightweight (API + Ridge only, no transformer backend):
+#   pip install fastapi "uvicorn[standard]" pydantic pydantic-settings \
+#       numpy scikit-learn pandas joblib
+
+# --- API / serving ---
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pydantic>=2.6
+pydantic-settings>=2.2
+
+# --- Lightweight ML backend (TF-IDF + Ridge) ---
+numpy>=1.26
+scikit-learn>=1.4
+pandas>=2.1
+joblib>=1.3
+
+# --- Transformer backend (DistilBERT) - heavy, optional at runtime ---
+# For NVIDIA GPUs install torch from the CUDA index instead:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu128
+torch>=2.2
+transformers>=4.39
+accelerate>=1.1  # required by the transformers Trainer
