@@ -83,7 +83,7 @@ RateMyReview/
 │   ├── raw/                   # Original review datasets (sample included)
 │   └── processed/             # Cleaned training data
 ├── models/
-│   ├── distilbert_weights/    # Fine-tuned model files (after training)
+│   ├── distilbert_weights/    # Fine-tuned model files (binaries via Git LFS)
 │   └── ridge_model.pkl        # Trained fallback model (after training)
 │
 ├── requirements.txt
@@ -92,6 +92,12 @@ RateMyReview/
 ```
 
 ## Quickstart
+
+> **Cloning this repo:** install [Git LFS](https://git-lfs.com) first
+> (`git lfs install`) so the DistilBERT weights
+> (`models/distilbert_weights/model.safetensors`) are downloaded with the
+> clone. Without LFS the repo still works - retrain locally or serve with the
+> bundled Ridge backend.
 
 ### 1. Install dependencies
 
